@@ -28,7 +28,7 @@ func DataSourceEnrichPolicy() *schema.Resource {
 		},
 		"indices": {
 			Description: "Array of one or more source indices used to create the enrich index.",
-			Type:        schema.TypeSet,
+			Type:        schema.TypeList,
 			Computed:    true,
 			Elem: &schema.Schema{
 				Type: schema.TypeString,
@@ -41,7 +41,7 @@ func DataSourceEnrichPolicy() *schema.Resource {
 		},
 		"enrich_fields": {
 			Description: "Fields to add to matching incoming documents. These fields must be present in the source indices.",
-			Type:        schema.TypeSet,
+			Type:        schema.TypeList,
 			Computed:    true,
 			Elem: &schema.Schema{
 				Type: schema.TypeString,
